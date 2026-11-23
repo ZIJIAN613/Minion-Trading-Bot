@@ -10,12 +10,6 @@ The bot is organized as a strict, one-directional pipeline. Each module has a
 single job and passes clean, structured data to the next. Modules never skip
 the pipeline order.
 
-```
-Data Ingestion → Strategy Engine → Risk Engine → Order Execution
-                                        ↑
-                           Logging observes all four, always
-```
-
 ## Modules
 
 | Directory          | Role                                                                                                           |
