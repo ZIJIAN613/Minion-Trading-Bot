@@ -1,0 +1,4 @@
+# file: C:\Minions\log_system\file_handler.py
+# hypothesis_version: 6.131.15
+
+['%Y-%m-%dT%H:%M:%SZ', 'WARNING', 'event', 'file_write_failed', 'level', 'log_system', 'message', 'module', 'timestamp', 'unknown']

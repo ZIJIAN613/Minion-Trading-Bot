@@ -1,0 +1,31 @@
+# orchestrator/config.yaml
+# ========================
+# Configuration for the Pipeline Orchestrator module.
+#
+# The Orchestrator ties together the four pipeline modules
+# (Data Ingestion → Strategy → Risk Engine → Execution) into a
+# continuous, unattended trading loop.
+#
+# All values here can be tuned without modifying code.
+
+# bar_check_interval_seconds: How frequently (in seconds) to poll for
+# a new daily bar. Also used as the recheck interval when waiting for
+# market open during deferred execution.
+# Type: int or float, range: [60, 3600]. REQUIRED — no default.
+bar_check_interval_seconds: 300
+
+# symbol: The ticker symbol to trade. Must be a non-empty string of
+# 1–10 characters.
+# Type: string, default: "AAPL". OPTIONAL.
+# symbol: "AAPL"
+
+# state_file_path: Relative or absolute path to the durable state file.
+# Must be a non-empty string of 1–255 characters.
+# Type: string, default: "orchestrator/state.json". OPTIONAL.
+# state_file_path: "orchestrator/state.json"
+
+# kill_switch_file_path: Relative or absolute path to the kill switch file.
+# Presence of this file (regardless of content) halts the loop immediately.
+# Must be a non-empty string of 1–255 characters.
+# Type: string, default: "orchestrator/KILL_SWITCH". OPTIONAL.
+# kill_switch_file_path: "orchestrator/KILL_SWITCH"

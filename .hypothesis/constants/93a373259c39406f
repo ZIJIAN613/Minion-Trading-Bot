@@ -1,0 +1,4 @@
+# file: C:\Minions\log_system\__init__.py
+# hypothesis_version: 6.131.15
+
+['get_logger', 'log_structured']

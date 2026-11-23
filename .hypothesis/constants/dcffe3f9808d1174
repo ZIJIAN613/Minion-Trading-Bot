@@ -1,0 +1,4 @@
+# file: C:\Minions\alerting\sender.py
+# hypothesis_version: 6.131.15
+
+[200, 4096, '+00:00', ', ', 'AlertingConfig', 'Content-Type', 'N/A', 'POST', 'Z', '_', 'alerting', 'application/json', 'chat_id', 'cycle_number', 'error_summary', 'fill_price', 'filled_quantity', 'halt_the_loop_error', 'order_filled', 'order_id', 'order_submitted', 'skip_and_retry_error', 'symbol', 'text', 'utf-8', '✅ Order Filled', '📤 Order Submitted', '🟢 Graceful Shutdown']

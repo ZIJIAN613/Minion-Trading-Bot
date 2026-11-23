@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\loop.py
+# hypothesis_version: 6.165.10
+
+['%Y-%m-%d', '1d', 'NO_ACTION', 'Signals', 'VETOED', '_base_url', 'account_query', 'base_url', 'cancelled', 'close', 'cycle_in_progress', 'data_ingestion', 'decision', 'deferred', 'entry_order_id', 'error', 'error_details', 'event', 'execution', 'expired', 'filled', 'no_action', 'orchestrator', 'paper', 'partial_fill', 'post_order', 'pre_order', 'rejected', 'risk_engine', 'safety_check_failed', 'shutdown_initiated', 'signal', 'signal_name', 'skipped', 'status', 'strategy', 'strategy/config.yaml', 'timeout', 'unprotected_count', 'vetoed']

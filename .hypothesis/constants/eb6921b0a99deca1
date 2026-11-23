@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\loop.py
+# hypothesis_version: 6.165.10
+
+['%Y-%m-%d', '1d', 'NO_ACTION', 'VETOED', '_base_url', 'base_url', 'cancelled', 'close', 'decision', 'deferred', 'error', 'expired', 'filled', 'no_action', 'orchestrator', 'paper', 'partial_fill', 'rejected', 'skipped', 'status', 'timeout', 'vetoed']

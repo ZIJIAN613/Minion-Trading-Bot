@@ -1,0 +1,4 @@
+# file: C:\Minions\risk_engine\evaluate.py
+# hypothesis_version: 6.131.15
+
+[100, 'APPROVED', 'BUY', 'HOLD', 'NO_ACTION', 'SELL', 'VETOED', 'cash', 'daily_realized_pnl', 'decision', 'equity', 'open_positions', 'position_size', 'reason', 'signal', 'size', 'stop_loss', 'symbol', 'timestamp']

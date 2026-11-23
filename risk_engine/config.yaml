@@ -1,0 +1,31 @@
+# risk_engine/config.yaml
+# =======================
+# Configuration for the Risk Engine's guardrails.
+#
+# These values control how aggressively the risk engine limits trades.
+# All four parameters are required — remove or invalidate any one and
+# the module will refuse to start (raising ValueError).
+
+# max_position_percent: Maximum percentage of account equity that a
+# single trade may represent.  For example, 5.0 means no single trade
+# can use more than 5% of total equity.
+# Type: float, range: (0, 100) exclusive.
+max_position_percent: 5.0
+
+# max_daily_loss: Maximum realized loss in USD allowed in a single
+# trading day before ALL further trades are vetoed.  Once today's
+# realized P&L drops to -500, no new BUY or SELL signals are approved.
+# Type: positive float (in USD).
+max_daily_loss: 500.0
+
+# max_open_positions: Maximum number of concurrent open positions
+# allowed before new BUY signals are vetoed.  SELL signals are never
+# blocked by this limit (selling reduces exposure).
+# Type: positive integer, range: [1, 1000].
+max_open_positions: 5
+
+# stop_loss_percent: Percentage distance from entry price at which
+# the stop-loss is placed.  For a BUY at $100 with 2.0%, the stop-loss
+# is $98.00.  For a SELL at $100 with 2.0%, the stop-loss is $102.00.
+# Type: float, range: (0, 100) exclusive.
+stop_loss_percent: 2.0

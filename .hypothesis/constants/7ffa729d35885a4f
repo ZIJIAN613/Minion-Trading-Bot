@@ -1,0 +1,4 @@
+# file: C:\Minions\data_ingestion\schemas.py
+# hypothesis_version: 6.131.15
+
+['UTC', 'ask_price', 'bid_price', 'close', 'datetime64[ns, UTC]', 'float64', 'high', 'int64', 'low', 'mid_price', 'open', 'str', 'symbol', 'timestamp', 'volume']

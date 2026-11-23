@@ -1,0 +1,14 @@
+# strategy/config.yaml
+# =====================
+# Configuration for the Strategy Engine's SMA crossover parameters.
+#
+# These values control the window sizes used to compute Simple Moving
+# Averages (SMAs) on the close price of incoming bar data.
+
+# short_window: Number of bars for the fast (short) SMA.
+# Must be an integer in [1, 10000] and strictly less than long_window.
+short_window: 7
+
+# long_window: Number of bars for the slow (long) SMA.
+# Must be an integer in [1, 10000] and strictly greater than short_window.
+long_window: 15

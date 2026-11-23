@@ -1,0 +1,4 @@
+# file: C:\Minions\log_system\logger.py
+# hypothesis_version: 6.131.15
+
+['CRITICAL', 'DEBUG', 'ERROR', 'INFO', 'WARNING', '_fields', '_log_system_managed', 'app', 'event']

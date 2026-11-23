@@ -1,0 +1,4 @@
+# file: C:\Minions\execution\execute.py
+# hypothesis_version: 6.165.10
+
+[1.0, 500, 'APPROVED', 'BUY', 'Decision skipped', 'HOLD', 'NO_ACTION', 'Order filled', 'UTC', 'VETOED', '_base_url', 'api_error', 'base_url', 'bracket', 'bracket_fallback', 'buy', 'cancelled', 'cancelled_quantity', 'decision', 'decision_skipped', 'entry_order_id', 'error', 'error_type', 'execution', 'expired', 'fill_price', 'filled', 'filled_at', 'filled_avg_price', 'filled_qty', 'filled_quantity', 'final_check_failed', 'info', 'legs', 'market', 'order_filled', 'order_submitted', 'order_terminal', 'order_type', 'oto', 'paper', 'partial_fill', 'partially_filled', 'poll_network_error', 'poll_requery_failed', 'position_size', 'qty', 'reason', 'rejected', 'sell', 'signal', 'skipped', 'status', 'stop', 'stop_loss', 'stop_loss_corrected', 'stop_loss_order_id', 'symbol', 'timeout', 'timestamp', 'warning']

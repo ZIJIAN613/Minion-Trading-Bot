@@ -1,0 +1,7 @@
+pandas
+python-dotenv
+alpaca-py
+pyyaml==6.0.2
+pytest==8.3.5
+hypothesis==6.131.15
+pytest-asyncio==0.24.0

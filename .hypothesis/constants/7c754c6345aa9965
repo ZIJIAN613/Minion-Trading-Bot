@@ -1,0 +1,4 @@
+# file: C:\Minions\log_system\formatter.py
+# hypothesis_version: 6.131.15
+
+['+00:00', 'Z', '_fields', 'args', 'created', 'event', 'exc_info', 'exc_text', 'filename', 'funcName', 'level', 'levelname', 'levelno', 'lineno', 'message', 'module', 'msecs', 'msg', 'name', 'pathname', 'process', 'processName', 'relativeCreated', 'stack_info', 'taskName', 'thread', 'threadName', 'timestamp']

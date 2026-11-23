@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\safety_check.py
+# hypothesis_version: 6.165.10
+
+['buy', 'event', 'market_value', 'orchestrator', 'quantity', 'sell', 'stop', 'stop_limit', 'symbol', 'total_positions', 'unprotected_count']

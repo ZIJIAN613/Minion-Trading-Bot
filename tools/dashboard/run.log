@@ -1,0 +1,28 @@
+{"event": "Orchestrator config loaded: symbol=AAPL, interval=300.0s, state_file=orchestrator/state.json", "level": "INFO", "timestamp": "2026-09-07T16:10:58.179179Z"}
+{"event": "Paper trading client created and verified.", "level": "INFO", "timestamp": "2026-09-07T16:10:58.179995Z"}
+{"event": "Pipeline configs loaded: strategy(short=7, long=15), risk_engine, execution", "level": "INFO", "timestamp": "2026-09-07T16:10:58.183470Z"}
+{"event": "State file loaded: positions=0, last_acted_bar=2026-09-04, pending_decision=no", "level": "INFO", "timestamp": "2026-09-07T16:10:58.183886Z"}
+{"event": "unprotected_position_detected", "level": "CRITICAL", "timestamp": "2026-09-07T16:10:59.599821Z", "symbol": "AAPL", "quantity": 3.0, "market_value": 959.9100000000001}
+{"event": "safety_check_completed", "level": "INFO", "timestamp": "2026-09-07T16:10:59.600544Z", "total_positions": 1, "unprotected_count": 1}
+{"event": "Safety check found 1 unprotected position(s) — proceeding with caution.", "level": "WARNING", "timestamp": "2026-09-07T16:10:59.600792Z"}
+{"event": "Signal handlers registered. Entering main loop.", "level": "INFO", "timestamp": "2026-09-07T16:10:59.603638Z"}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:11:00.662014Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:11:00.662014Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:16:02.243907Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:16:02.243907Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:21:03.915954Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:21:03.915954Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:26:05.597452Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:26:05.597452Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:31:07.467915Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:31:07.467915Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:36:09.352208Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:36:09.352208Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:41:11.037802Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:41:11.037802Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:46:12.707733Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:46:12.707733Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:51:14.272891Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:51:14.272891Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:56:15.953064Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}
+{"event": "historical_fetch_complete", "level": "DEBUG", "timestamp": "2026-09-07T16:56:15.953064Z", "symbol": "AAPL", "timeframe": "1d", "start": "2026-09-02", "end": "2026-09-07", "bar_count": 3}

@@ -1,0 +1,4 @@
+# file: C:\Minions\strategy\config_loader.py
+# hypothesis_version: 6.131.15
+
+[10000, 'long_window', 'r', 'short_window', 'utf-8']

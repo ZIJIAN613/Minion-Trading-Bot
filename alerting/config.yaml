@@ -1,0 +1,39 @@
+# alerting/config.yaml
+# ====================
+# Configuration for Telegram alerting in the Minions paper-trading bot.
+#
+# Alerting is DISABLED by default (both credential fields are empty).
+# To enable, set telegram_bot_token and telegram_chat_id below or via
+# environment variables TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.
+
+# telegram_bot_token: The Telegram Bot API token from @BotFather.
+# Prefer using the TELEGRAM_BOT_TOKEN environment variable instead of
+# storing the token in this file (avoids committing secrets to version
+# control).
+# Type: string, default: "" (disabled). OPTIONAL.
+telegram_bot_token: "8748704964:AAEMPx67o9G6LsLx2TbPycb81E0z6LHWIFM"
+
+# telegram_chat_id: The Telegram chat ID to send alerts to.
+# Prefer using the TELEGRAM_CHAT_ID environment variable.
+# To find your chat ID, message @userinfobot on Telegram.
+# Type: string, default: "" (disabled). OPTIONAL.
+telegram_chat_id: "1169716619"
+
+# enabled_events: Which event types trigger Telegram alerts.
+# If this key is absent or null, ALL six event types are enabled.
+# Uncomment and edit the list below to receive alerts for only specific events.
+# Type: list of strings, default: all six event types. OPTIONAL.
+# enabled_events:
+#   - order_submitted
+#   - order_filled
+#   - skip_and_retry_error
+#   - halt_the_loop_error
+#   - kill_switch_triggered
+#   - graceful_shutdown_completed
+
+# telegram_bot_enabled: Enable the remote control Telegram bot (stretch goal).
+# When true AND both credentials are set, a daemon thread listens for
+# /kill and /status commands from the configured chat.
+# Type: bool, default: false. OPTIONAL.
+telegram_bot_enabled: true
+  

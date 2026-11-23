@@ -1,0 +1,4 @@
+# file: C:\Minions\alerting\telegram_bot.py
+# hypothesis_version: 6.165.10
+
+[200, '/', '/kill', '/status', 'Content-Type', 'N/A', 'POST', 'TelegramBotListener', 'alerting', 'application/json', 'chat', 'chat_id', 'consecutive_failures', 'cycle_number', 'error_message', 'error_type', 'event', 'id', 'last_outcome', 'message', 'ok', 'result', 'running', 'text', 'unknown', 'update_id', 'utf-8', 'w', '🔴', '🔴 ACTIVE', '🟢', '🟢 inactive']

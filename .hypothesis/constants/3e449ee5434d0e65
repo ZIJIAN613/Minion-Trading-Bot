@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\state_manager.py
+# hypothesis_version: 6.131.15
+
+['.tmp', 'UTC', 'cash', 'closed', 'daily_realized_pnl', 'entry_order_id', 'entry_price', 'entry_timestamp', 'equity', 'exit_timestamp', 'fill_price', 'filled', 'filled_quantity', 'isoformat', 'last_acted_bar', 'open', 'open_positions', 'partial_fill', 'partially_closed', 'pending_decision', 'positions', 'quantity', 'r', 'size', 'status', 'stop_loss_order_id', 'symbol', 'timestamp', 'utf-8', 'w']

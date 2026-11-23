@@ -1,0 +1,4 @@
+# file: C:\Minions\data_ingestion\credentials.py
+# hypothesis_version: 6.131.15
+
+['APCA_API_KEY_ID', 'APCA_API_SECRET_KEY']

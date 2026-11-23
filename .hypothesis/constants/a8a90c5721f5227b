@@ -1,0 +1,4 @@
+# file: C:\Minions\alerting\config_loader.py
+# hypothesis_version: 6.165.10
+
+[200, ', ', 'TELEGRAM_BOT_TOKEN', 'TELEGRAM_CHAT_ID', 'alerting', 'alerting/config.yaml', 'enabled_events', 'halt_the_loop_error', 'order_filled', 'order_submitted', 'r', 'skip_and_retry_error', 'telegram_bot_enabled', 'telegram_bot_token', 'telegram_chat_id', 'utf-8']

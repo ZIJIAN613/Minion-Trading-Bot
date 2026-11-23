@@ -1,0 +1,4 @@
+# file: C:\Minions\data_ingestion\timeframe_map.py
+# hypothesis_version: 6.131.15
+
+[', ', '15m', '1d', '1h', '1m', '30m', '4h', '5m']

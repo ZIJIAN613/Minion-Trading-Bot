@@ -1,0 +1,4 @@
+# file: C:\Minions\execution\validators.py
+# hypothesis_version: 6.165.10
+
+[500, 'APPROVED', 'BUY', 'HOLD', 'NO_ACTION', 'SELL', 'VETOED', 'decision', 'position_size', 'reason', 'signal', 'stop_loss', 'symbol', 'timestamp']

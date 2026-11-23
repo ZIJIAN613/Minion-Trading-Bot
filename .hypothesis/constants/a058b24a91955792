@@ -1,0 +1,4 @@
+# file: C:\Minions\risk_engine\config_loader.py
+# hypothesis_version: 6.131.15
+
+[100, 1000, 'max_daily_loss', 'max_open_positions', 'max_position_percent', 'r', 'stop_loss_percent', 'utf-8']

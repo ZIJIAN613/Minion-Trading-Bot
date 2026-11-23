@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\loop.py
+# hypothesis_version: 6.165.10
+
+[500, '%Y-%m-%d', '1d', 'BUY', 'NO_ACTION', 'SELL', 'Shutdown completed.', 'Signals', 'VETOED', '_base_url', 'account_query', 'bar_timestamp', 'base_url', 'cancelled', 'cash', 'close', 'cycle_completed', 'cycle_in_progress', 'cycle_number', 'cycle_skipped', 'data_ingestion', 'decision', 'deferred', 'entry_order_id', 'equity', 'error', 'error_details', 'error_message', 'error_type', 'event', 'execution', 'execution error', 'expired', 'filled', 'loop_halted', 'new_bar_detected', 'no_action', 'orchestrator', 'outcome', 'paper', 'partial_fill', 'pipeline_stage', 'post_order', 'pre_order', 'reason', 'rejected', 'risk_engine', 'safety_check_failed', 'shutdown_completed', 'shutdown_initiated', 'signal', 'signal_name', 'skipped', 'state_write_failed', 'status', 'strategy', 'strategy/config.yaml', 'symbol', 'timeout', 'unknown', 'unprotected_count', 'vetoed']

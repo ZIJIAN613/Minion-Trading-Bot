@@ -1,0 +1,4 @@
+# file: C:\Minions\strategy\__init__.py
+# hypothesis_version: 6.131.15
+
+['StrategyConfig', 'compute_signal', 'load_config']

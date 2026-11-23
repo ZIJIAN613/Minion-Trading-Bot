@@ -1,0 +1,18 @@
+# execution/config.yaml
+# =====================
+# Configuration for the Order Execution module.
+#
+# These values control order fill confirmation behavior.
+# Both parameters are required — remove or invalidate any one and
+# the module will refuse to start (raising ValueError).
+
+# fill_timeout_seconds: Maximum number of seconds to wait for an order
+# to reach a terminal state (filled, cancelled, expired, rejected)
+# before giving up and cancelling the order.
+# Type: int or float, range: [5, 300].
+fill_timeout_seconds: 30
+
+# poll_interval_seconds: How frequently (in seconds) to poll the Alpaca
+# API for the current order status during fill confirmation.
+# Type: int or float, range: [0.5, 30].
+poll_interval_seconds: 1.0

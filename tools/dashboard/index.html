@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Orchestrator Dashboard</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #2a2e38;
+    --text: #e6e6e6;
+    --muted: #8b93a3;
+    --green: #3ecf8e;
+    --red: #e5534b;
+    --yellow: #e5c07b;
+    --blue: #61afef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+  }
+  header h1 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .status-running { background: rgba(62,207,142,0.15); color: var(--green); }
+  .status-stopped { background: rgba(139,147,163,0.15); color: var(--muted); }
+  .pid { font-size: 12px; color: var(--muted); }
+  .spacer { flex: 1; }
+  button {
+    border: 1px solid var(--border);
+    background: #1f232d;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  button:hover { background: #262b37; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  #btn-start { border-color: var(--green); color: var(--green); }
+  #btn-stop { border-color: var(--yellow); color: var(--yellow); }
+  #btn-kill { border-color: var(--red); color: var(--red); }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    height: calc(100vh - 64px);
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .panel-title {
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 14px;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  #state-body { white-space: pre-wrap; word-break: break-word; color: #cfd6e4; }
+  .log-line { margin-bottom: 4px; white-space: pre-wrap; word-break: break-word; }
+  .lvl-INFO { color: var(--blue); }
+  .lvl-WARNING { color: var(--yellow); }
+  .lvl-ERROR, .lvl-CRITICAL { color: var(--red); font-weight: 600; }
+  .lvl-DEBUG { color: var(--muted); }
+  .lvl-raw { color: #9aa4b5; }
+  .note {
+    margin: 10px 14px 0;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Orchestrator Dashboard</h1>
+  <span id="status-badge" class="status-badge status-stopped">STOPPED</span>
+  <span id="pid-label" class="pid"></span>
+  <div class="spacer"></div>
+  <button id="btn-start" onclick="callAction('/api/start')">Start</button>
+  <button id="btn-stop" onclick="callAction('/api/stop')">Stop (graceful)</button>
+  <button id="btn-kill" onclick="confirmKill()">Kill (simulate crash)</button>
+</header>
+
+<main>
+  <div class="panel">
+    <div class="panel-title">Live Log Feed</div>
+    <div class="panel-body" id="log-body"></div>
+  </div>
+  <div class="panel">
+    <div class="panel-title">orchestrator/state.json</div>
+    <div class="panel-body" id="state-body"></div>
+    <div class="note">
+      Note: "Stop (graceful)" is best-effort on Windows and may not exactly
+      reproduce the SIGINT-handler code path. For rigorous shutdown-signal
+      verification, run the orchestrator in its own terminal and press
+      Ctrl+C there instead. "Kill" is fully reliable on any OS and is the
+      correct choice for crash-recovery testing.
+    </div>
+  </div>
+</main>
+
+<script>
+const logBody = document.getElementById('log-body');
+const stateBody = document.getElementById('state-body');
+const statusBadge = document.getElementById('status-badge');
+const pidLabel = document.getElementById('pid-label');
+const btnStart = document.getElementById('btn-start');
+const btnStop = document.getElementById('btn-stop');
+const btnKill = document.getElementById('btn-kill');
+
+let autoScroll = true;
+logBody.addEventListener('scroll', () => {
+  const atBottom = logBody.scrollHeight - logBody.scrollTop - logBody.clientHeight < 20;
+  autoScroll = atBottom;
+});
+
+async function callAction(path) {
+  try {
+    await fetch(path, { method: 'POST' });
+  } catch (e) {
+    console.error(e);
+  }
+  refreshStatus();
+}
+
+function confirmKill() {
+  if (confirm('This will hard-kill the orchestrator process (simulates a crash). Continue?')) {
+    callAction('/api/kill');
+  }
+}
+
+async function refreshStatus() {
+  try {
+    const res = await fetch('/api/status');
+    const data = await res.json();
+    if (data.running) {
+      statusBadge.textContent = 'RUNNING';
+      statusBadge.className = 'status-badge status-running';
+      pidLabel.textContent = 'PID ' + data.pid;
+      btnStart.disabled = true;
+      btnStop.disabled = false;
+      btnKill.disabled = false;
+    } else {
+      statusBadge.textContent = 'STOPPED';
+      statusBadge.className = 'status-badge status-stopped';
+      pidLabel.textContent = data.returncode !== null && data.returncode !== undefined
+        ? ('exit code ' + data.returncode) : '';
+      btnStart.disabled = false;
+      btnStop.disabled = true;
+      btnKill.disabled = true;
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function refreshState() {
+  try {
+    const res = await fetch('/api/state');
+    const data = await res.json();
+    stateBody.textContent = JSON.stringify(data, null, 2);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function refreshLogs() {
+  try {
+    const res = await fetch('/api/logs');
+    const data = await res.json();
+    logBody.innerHTML = '';
+    for (const entry of data.lines) {
+      const div = document.createElement('div');
+      const level = entry.level || (entry.raw ? 'raw' : 'INFO');
+      div.className = 'log-line lvl-' + level;
+      if (entry.raw !== undefined) {
+        div.textContent = entry.raw;
+      } else {
+        const ts = entry.timestamp ? entry.timestamp + '  ' : '';
+        const ev = entry.event ? '[' + entry.event + '] ' : '';
+        const msg = entry.message || '';
+        div.textContent = ts + (entry.level || '') + '  ' + ev + msg;
+      }
+      logBody.appendChild(div);
+    }
+    if (autoScroll) {
+      logBody.scrollTop = logBody.scrollHeight;
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+function tick() {
+  refreshStatus();
+  refreshState();
+  refreshLogs();
+}
+
+tick();
+setInterval(tick, 1500);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+# file: C:\Minions\orchestrator\config_loader.py
+# hypothesis_version: 6.165.10
+
+[255, 3600, 'AAPL', 'orchestrator', 'r', 'state_file_path', 'symbol', 'utf-8']
