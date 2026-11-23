@@ -4,9 +4,6 @@ A personal, non-commercial algorithmic trading bot built for learning. It runs
 against **Alpaca paper trading only** — no real money is at risk. Live trading
 is explicitly out of scope.
 
-> ⚠️ **Paper trading only.** There is no code path that routes to a live
-> trading account, and none should be added while this notice stands.
-
 ## Overview
 
 The bot is organized as a strict, one-directional pipeline. Each module has a
